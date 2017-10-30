@@ -1,0 +1,103 @@
+<!--
+// ------------------------------------------------------------------------------
+// Assignment (3)
+// Written by: Zhihong Guo
+// For SOEN 287 Section (2164) – Winter 2017
+// -----------------------------------------------------------------------------
+-->
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="Author " content= " Zhihong Guo" />
+    <title> Question 5 </title>
+    <style type="text/css">
+        img {float: left;
+            padding-top:10%;}
+        body {background-color:#FEFC7E;}
+        #section1 {color:red;font-size:large;font-weight: bolder;}
+        .section2 {background-color:#A8A4C4; border-color: red;border-width: medium;}
+        .section3 {background-color:#D5EBBF;border-color: green;border-width: medium;}
+        #section4 {color:green;font-size:large;font-weight: bolder;}
+        .label {font-weight: bolder;}
+        #legend{color:green;font-size:large;font-weight: bolder;}
+        #expertSuggestions{visibility: hidden;background-color:lightcoral; border-color: green;border-width: medium;}
+    </style>
+    <script type="text/javascript" src="Question5.js"></script>
+</head>
+<body>
+<table>
+    <tr>
+        <td><a href = "https://image.freepik.com/free-icon/for-rent_318-142229.jpg"><img src="https://image.freepik.com/free-icon/for-rent_318-142229.jpg" alt="for rent"/></a></td>
+        <td><h1>Zhihong's Apartment Search Form</h1></td>
+    </tr>
+</table>
+<form action = "">
+    <fieldset class ="section2">
+        <legend id ="section1">Renter(s)Information</legend>
+        <label class ="label">How many people will live in the apartment? </label>
+        <label><input type="number" /></label><br/>
+        <br/>
+        <label class ="label">Smoker? </label>
+        <label><input type="radio" name ="smoker" value= "yes"/>Yes</label>
+        <label><input type="radio"  name ="smoker" value= "no"/>No</label>
+        <br/><br/>
+        <label class ="label">Any Pets?</label><br/>
+        <label><input type ="checkbox" name ="pets" value= "cat">Cat(s)</label><br/>
+        <label><input type ="checkbox" name ="pets" value= "dog">Dog(s)</label><br/>
+        <label><input type ="checkbox" name ="pets" value= "otherSpecify">Other <span class ="label">Specify:</span></label>
+        <label><input type ="text" name ="apartment"></label><br/>
+        <label><input type ="checkbox" name ="pets" value= "noPet">No Pets</label><br/>
+    </fieldset>
+    <br/>
+    <fieldset class ="section3">
+        <legend id ="section4">What are you looking for?</legend>
+        <ul>
+            <li><label class ="label">Size of apartment:</label><br/>
+                <label><input type ="checkbox" name ="size" value= "studio">Studio</label>
+                <label><input type ="checkbox" name ="size" value= "threeAndHalf">3&frac12;</label>
+                <label><input type ="checkbox" name ="size" value= "fourAndHalf" id="fourAndHalf">4&frac12;</label>
+                <label><input type ="checkbox" name ="size" value= "fiveAndHalf" id="fiveAndHalf">5&frac12;</label>
+                <label><input type ="checkbox" name ="size" value= "moreThanFiveAndHalf" id="moreThanFiveAndHalf">More than 5&frac12;</label>
+                <br/><br/>
+            </li>
+            <li><label class ="label">Do you have preferred locations?</label><br/>
+                <label><input type ="checkbox" name ="locations" value= "wt">West Island</label>
+                <label><input type ="checkbox" name ="locations" value= "dt" id="dt">Downtown</label>
+                <label><input type ="checkbox" name ="locations" value= "lw">Lower Westmount</label>
+                <label><input type ="checkbox" name ="locations" value= "ndg">NDG</label>
+                <label><input type ="checkbox" name ="locations" value= "ei">East end of Island</label>
+                <label><input type ="checkbox" name ="locations" value= "na">Don't care</label>
+                <br/><br/>
+            </li>
+            <li><label class ="label">Price Range/month:<br/>
+                <select name = "priceRange">
+                    <option value ="reg" id="reg"> &lt;$500 </option>
+                    <option value = "lat" id="lat"> $500-$1000 </option>
+                    <option value = "chocMoc"> &gt;$1000</option>
+                    <option value = "whtChocMoc"> No price limit </option>
+                </select>
+            </label>
+                <br/><br/>
+            </li>
+            <li><label class ="label">Would be nice to have</label><br/>
+                <label><input type ="checkbox" name ="otherRequest" value= "firePlace">Fire place</label>
+                <label><input type ="checkbox" name ="otherRequest" value= "laudary">Laundromat in building </label>
+                <label><input type ="checkbox" name ="otherRequest" value= "inParking">Indoor Parking </label>
+                <label><input type ="checkbox" name ="otherRequest" value= "outParking">Output Parking </label>
+                <label><input type ="checkbox" name ="otherRequest" value= "balcony">Balcony</label>
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset id="expertSuggestions">
+        <legend id="legend">Expert suggestions</legend>
+        <p id="message"></p>
+    </fieldset>
+    <p>
+        Let's see what we can find...<br/><br/>
+        <input type = "submit" value ="Search" id="search"/>
+        <input type = "reset" value ="Start over"/>
+    </p>
+</form>
+</body>
+</html>
